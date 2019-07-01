@@ -1,13 +1,11 @@
-Package: dynplot
+Package: dynplot2
 Type: Package
-Title: Plotting functions for the dynverse
-Version: 1.0.1
+Title: Grammar of graphics for single-cell data
+Version: 1.0.0.9000
 Authors@R: c(
   person("Robrecht", "Cannoodt", email = "rcannood@gmail.com", role = c("aut")),
   person("Wouter", "Saelens", email = "wouter.saelens@gmail.com", role = c("aut", "cre")))
-Description: Package that create ggplot2 plots of single-cell trajectories. This can be
-            the trajectory topology itself, projected onto a dimensionality reduction,
-            using a heatmap, or a comparison between two trajectories.
+Description: Package that create ggplot2 plots of single-cell datasets.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
@@ -32,10 +30,9 @@ Imports:
   MASS,
   magrittr,
   methods,
-  patchwork,
-  pdist,
   purrr,
   rje,
+  shades,
   RColorBrewer,
   reshape2,
   testthat,
@@ -45,36 +42,12 @@ Imports:
   vipor,
   viridis
 Suggests:
-  cobs,
-  destiny,
   knitr,
   rmarkdown
-Remotes:  
-    thomasp85/patchwork,
-    dynverse/dynutils@master,
-    dynverse/dyndimred@master,
-    dynverse/dynwrap@master,
-    dynverse/dynfeature@master
+Remotes: 
+  dynverse/dynutils@devel,
+  dynverse/dyndimred@devel,
+  dynverse/dynwrap@devel,
+  dynverse/dynfeature@devel
 VignetteBuilder: knitr
-Collate: 
-    'milestone_palette.R'
-    'add_coloring.R'
-    'data.R'
-    'dummy_proofing.R'
-    'is_colour_vector.R'
-    'linearise_cells.R'
-    'optimize_order.R'
-    'package.R'
-    'plot_dendro.R'
-    'plot_dimred.R'
-    'plot_edge_flips.R'
-    'plot_generic.R'
-    'plot_graph.R'
-    'plot_grouped.R'
-    'plot_heatmap.R'
-    'plot_linearised_comparison.R'
-    'plot_onedim.R'
-    'plot_strip.R'
-    'plot_topology.R'
-    'process_dynplot.R'
-    'theme_clean.R'
+Roxygen: list(markdown = TRUE)
